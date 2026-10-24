@@ -4,9 +4,9 @@ const hMol = 2.016e-3;
 const inputForm = document.getElementById('inputForm')
 addEventListener('input', function(){
   const temperature = document.getElementById('inTemp').value;
-  const fromUnit = document.getElementById('fromUnit').value;
+  const fromUnit = document.getElementById('convFrom').value;
   const tempKelvin = toKelvin(temperature, fromUnit);
-  const toUnit = document.getElementById('toUnit').value;
+  const toUnit = document.getElementById('convTo').value;
   const newTemp = toNewUnit(tempKelvin, toUnit);
   const destination = document.getElementById('result');
   destination.value = newTemp
