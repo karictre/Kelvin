@@ -9,7 +9,7 @@ addEventListener('input', function(){
   const toUnit = document.getElementById('convTo').value;
   const newTemp = toNewUnit(tempKelvin, toUnit);
   const destination = document.getElementById('result');
-  destination.value = newTemp
+  destination.textContent = newTemp;
 })
 
 function toKelvin(temperature, units) {
