@@ -1,11 +1,16 @@
-var tempKelvin = 0;
-function update() {
-  const temperature = document.getElementByID('inTemp').value;
-  const from = document.getElementByID('fromUnit').value;
-  tempKelvin = toKelvin()
-  const to = document.getElementByID('toUnit').value;
-  
-}
+const universalGas = 8.314;
+const hMol = 2.016e-3;
+
+const inputForm = document.getElementById('inputForm')
+addEventListener('input', function(){
+  const temperature = document.getElementById('inTemp').value;
+  const fromUnit = document.getElementById('fromUnit').value;
+  const tempKelvin = toKelvin(temperature, fromUnit);
+  const toUnit = document.getElementById('toUnit').value;
+  const newTemp = toNewUnit(tempKelvin, toUnit);
+  const destination = document.getElementById('result');
+  destination.value = newTemp
+})
 
 function toKelvin(temperature, units) {
   switch (units) {
@@ -20,13 +25,11 @@ function toKelvin(temperature, units) {
 
 function toNewUnit(temperature, units) {
   switch (units) {
-    case "Cricket":
+    case "Cricket Hz":
       return 5.63e10*Math.exp(-6290/temperature)/13;
-    case "Fire":
+    case "Fire Color":
       return -274;
-    case "Hydrogen":
-      return (temperature-32)*5/9+273.15;
+    case "Hydrogen Speed":
+      return (3*universalGas*temperature/hMol)**0.5;
   }
 }
-
-addEventListener
