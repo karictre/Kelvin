@@ -1,9 +1,6 @@
 const universalGas = 8.314;
 const hMol = 2.016e-3;
 
-
-const disclaimer = getElementById("cricketWarning");
-
 const inputForm = document.getElementById('inputForm');
 addEventListener('input', function(){
   const temperature = document.getElementById('inTemp').value;
@@ -11,11 +8,6 @@ addEventListener('input', function(){
   const tempKelvin = toKelvin(temperature, fromUnit);
   const toUnit = document.getElementById('convTo').value;
   const newTemp = toNewUnit(tempKelvin, toUnit);
-  if (toUnit=="Cricket Hz") {
-    disclaimer.hidden=false;
-  } else {
-    disclaimer.hidden=true;
-  }
   const destination = document.getElementById('result');
   destination.textContent = newTemp;
 })
