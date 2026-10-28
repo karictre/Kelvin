@@ -1,7 +1,10 @@
 body {
-  font-family: Roboto;
+  font-family: Arial;
 }
 
 select {
-  background-color: #44AAFA
+  background-color: #50A0F0;
+  color: #F0E5C0;
+  border-width: 0px;
+  border-radius: 20px;
 }
