@@ -31,5 +31,7 @@ function toNewUnit(temperature, units) {
       return -274;
     case "Hydrogen Speed":
       return (3*universalGas*temperature/hMol)**0.5;
+    case "Kelvin":
+      return temperature;
   }
 }
