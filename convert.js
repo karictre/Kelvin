@@ -17,7 +17,7 @@ function toKelvin(temperature, units) {
     case "Kelvin":
       return temperature;
     case "Celsius":
-      return temperature+273.15;
+      return +temperature+273.15;
     case "Fahrenheit":
       return (temperature-32)*5/9+273.15;
   }
