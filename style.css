@@ -2,16 +2,27 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-select {
+.unit-select {
   background-color: #50A0F0;
   color: #F0E5C0;
   border-width: 0px;
   border-radius: 5px;
 }
 
-input {
+#inTemp {
   background-color: #1f4e49;
   color: #e5b928;
   border-width: 0px;
   border-radius: 5px;
+}
+
+#resultBox {
+  width: 200;
+  height: 100;
+
+  background-color: #ff8050;
+  color: #e5b928;
+
+  border-width: 0px;
+  border-radius: 10px;
 }
